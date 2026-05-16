@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Evidence Validator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="card" style="text-align: center; padding: 2.5rem; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 0.5rem">🛡️</div>
+                <h1>Secure Workspace</h1>
+                <p>Digital Evidence Integrity Validator</p>
+            </div>
+
+            <!-- Employee Profile Card -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-img-container">
+                        <img src="img/profile_ritvish.png" alt="Nunna Ritvish">
+                    </div>
+                    <div class="profile-name" id="display-name">Loading...</div>
+                    <div class="profile-status" id="display-status">...</div>
+                </div>
+                <div class="profile-info-list">
+                    <div class="profile-info-item">
+                        <span class="info-label">Full Name</span>
+                        <span class="info-value" id="info-name">...</span>
+                    </div>
+                    <div class="profile-info-item">
+                        <span class="info-label">DOB</span>
+                        <span class="info-value" id="info-dob">...</span>
+                    </div>
+                    <div class="profile-info-item">
+                        <span class="info-label">Gender</span>
+                        <span class="info-value" id="info-gender">...</span>
+                    </div>
+                    <div class="profile-info-item">
+                        <span class="info-label">Contact</span>
+                        <span class="info-value" id="info-phone">...</span>
+                    </div>
+                    <div class="profile-info-item" style="border-bottom: none;">
+                        <span class="info-label">Email</span>
+                        <span class="info-value" id="info-email">...</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <p style="color: hsl(0, 0%, 100%); font-size: 0.8rem; margin-top: 2.5rem; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Warning: Switching tabs or minimizing the window will be flagged as suspicious activity and you will be logged out immediately.
+            </p>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/monitor.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

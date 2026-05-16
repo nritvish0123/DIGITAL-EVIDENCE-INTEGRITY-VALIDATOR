@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uploaded Evidence - Evidence Validator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .evidence-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+      }
+      .table-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      th {
+        color: #818cf8;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+      td {
+        color: #e2e8f0;
+        font-size: 0.9rem;
+      }
+      .evidence-id {
+        font-family: monospace;
+        background: rgba(129, 140, 248, 0.1);
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        color: #818cf8;
+      }
+      .evidence-code {
+        font-family: monospace;
+        font-size: 0.8rem;
+        color: #94a3b8;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: #94a3b8;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .back-link:hover {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <main class="main-content">
+        <div class="container" style="max-width: 1200px">
+          <div class="card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1.5rem;
+              "
+            >
+              <h1 style="margin: 0">📜 Evidence Inventory</h1>
+              <button
+                onclick="window.print()"
+                class="btn"
+                style="width: auto; padding: 0.5rem 1rem"
+              >
+                Print Report
+              </button>
+            </div>
+            <div style="overflow-x: auto">
+              <table id="evidenceTable">
+                <thead>
+                  <tr>
+                    <th>Sr. No</th>
+                    <th>Evidence ID</th>
+                    <th>Evidence Code</th>
+                    <th>Uploaded By</th>
+                    <th>File Name</th>
+                    <th>Uploaded Time</th>
+                    <th>File Size</th>
+                    <th id="downloadHeader" class="hidden">Download</th>
+                  </tr>
+                </thead>
+                <tbody id="evidenceTableBody">
+                  <!-- Data will be loaded here -->
+                </tbody>
+              </table>
+            </div>
+            <div
+              id="noData"
+              class="hidden"
+              style="text-align: center; padding: 3rem; color: #94a3b8"
+            >
+              No evidence found in the records.
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/evidence-list.js"></script>
+  </body>
+</html>

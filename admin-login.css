@@ -1,0 +1,21 @@
+#videoContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+video {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transform: scaleX(-1); 
+}
+#statusMsg {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #64748b;
+}
+.loading {
+    color: #3b82f6;
+}

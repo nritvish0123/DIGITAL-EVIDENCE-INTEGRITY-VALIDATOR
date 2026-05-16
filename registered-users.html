@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users - Admin Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <main class="main-content">
+            <div class="container">
+                <div class="card">
+                    <h1 style="text-align: left;">👥 Registered Users</h1>
+                    <p style="text-align: left;">Manage all platform participants</p>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Registered</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTable">
+                                <!-- Data loaded via admin.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <a href="admin.html" class="link dynamic-dashboard-link">← Back to Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/admin.js"></script>
+    <script>
+        // Only show the relative part of admin.js needed for this page
+        document.addEventListener('DOMContentLoaded', () => {
+            // admin.js already fetches data and populates usersTable if it exists
+        });
+    </script>
+</body>
+</html>

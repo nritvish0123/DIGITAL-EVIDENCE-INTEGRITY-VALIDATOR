@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Evidence - Evidence Validator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <main class="main-content">
+            <div class="container">
+                <div class="card">
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem; text-align: center;">🔍</div>
+                    <h1>Validate Evidence</h1>
+                    <p>Verify the authenticity and integrity of digital evidence.</p>
+                    
+                    <div style="margin: 2rem 0;" id="validationForm">
+                        <div class="form-group">
+                            <label>Evidence Code</label>
+                            <input type="text" id="evidenceCode" placeholder="Enter 5-digit evidence code">
+                        </div>
+                        <div class="form-group">
+                            <label>Re-upload Evidence File</label>
+                            <div style="padding: 1.5rem; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px dashed rgba(255,255,255,0.1); text-align: center;">
+                                <input type="file" id="reEvidenceFile" style="display: none;">
+                                <button class="btn" id="reSelectBtn" style="width: auto; padding: 0.5rem 1.5rem; font-size: 0.9rem;">Select File</button>
+                                <div id="reFileName" style="margin-top: 0.5rem; font-size: 0.85rem; color: #94a3b8;">No file chosen</div>
+                            </div>
+                        </div>
+                        <button class="btn" id="startValidationBtn">Start Validation & Comparison</button>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div id="resultsContainer" class="hidden" style="margin-top: 2rem; animation: slideIn 0.3s ease-out;">
+                        <div class="card" style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.05);">
+                            <h3 style="margin-top: 0;">Validation Results</h3>
+                            
+                            <div style="display: flex; justify-content: space-around; margin: 1.5rem 0;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.3rem;">Integrity</div>
+                                    <div id="integrityVal" style="font-size: 1.8rem; font-weight: 800; color: #10b981;">0%</div>
+                                </div>
+                                <div style="text-align: center;">
+                                    <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.3rem;">Confidence Score</div>
+                                    <div id="confidenceVal" style="font-size: 1.8rem; font-weight: 800; color: #10b981;">0%</div>
+                                </div>
+                                <div style="text-align: center;">
+                                    <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.3rem;">Tampered</div>
+                                    <div id="tamperVal" style="font-size: 1.8rem; font-weight: 800; color: #ef4444;">0%</div>
+                                </div>
+                            </div>
+
+                            <div style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                <div style="font-size: 0.85rem; font-weight: 700; color: #94a3b8; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">Multi-Authority Check</div>
+                                <div id="authorityList" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                    <!-- Dynamic content -->
+                                </div>
+                            </div>
+
+                            <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                <div style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.5rem;">SHA-256 HASH (RE-UPLOADED)</div>
+                                <div id="newHashVal" style="font-family: monospace; font-size: 0.85rem; word-break: break-all; color: #fff;"></div>
+                            </div>
+
+                            <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                                <div style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.5rem;">SHA-256 HASH (ORIGINAL)</div>
+                                <div id="originalHashVal" style="font-family: monospace; font-size: 0.85rem; word-break: break-all; color: #fff;"></div>
+                            </div>
+
+                            <div id="modificationSection" style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;" class="hidden">
+                                <div style="font-size: 0.75rem; color: #ef4444; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase;">Modification Detected</div>
+                                <div id="modificationPoint" style="font-size: 0.9rem; color: #fff; font-weight: 600;"></div>
+                            </div>
+
+                            <div id="statusBadge" style="padding: 0.5rem; border-radius: 6px; text-align: center; font-weight: 700; font-size: 0.9rem;"></div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <a href="dashboard.html" class="link dynamic-dashboard-link">← Back to Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/monitor.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/validate.js"></script>
+
+</body>
+</html>

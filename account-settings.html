@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - Evidence Validator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <main class="main-content">
+            <div class="container" style="max-width: 600px;">
+                <div class="card">
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem; text-align: center;">👤</div>
+                    <h1>Account Settings</h1>
+                    <p>Manage your user profile and preferences.</p>
+                    
+                    <form id="settingsForm" style="margin-top: 2rem; text-align: left;">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="userName" placeholder="Your Name">
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label>Date of Birth</label>
+                                <input type="text" id="userDob" placeholder="DD-MM-YYYY">
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <select id="userGender" style="width: 100%; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
+                                    <option value="">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Contact</label>
+                            <input type="tel" id="userPhone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="userEmail" disabled style="opacity: 0.6; cursor: not-allowed;">
+                            <small style="color: #94a3b8;">Email cannot be changed.</small>
+                        </div>
+                        <button type="submit" class="btn">Save Changes</button>
+                    </form>
+
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <a href="dashboard.html" class="link dynamic-dashboard-link">← Back to Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/monitor.js"></script>
+    <script src="js/pages.js"></script>
+
+</body>
+</html>

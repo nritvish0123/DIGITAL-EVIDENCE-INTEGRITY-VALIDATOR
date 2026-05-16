@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Approvals - Admin Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <main class="main-content">
+            <div class="container">
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h2 style="margin: 0;">🔑 Pending Login Requests</h2>
+                        <button id="globalLogoutBtn" class="btn" style="width: auto; background: #ef4444; padding: 0.6rem 1.25rem; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);">
+                            🚫 Revoke & Logout All
+                        </button>
+                    </div>
+                    <div id="pendingContainer" class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pendingTable">
+                                <!-- Data loaded via admin.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <a href="admin.html" class="link dynamic-dashboard-link">← Back to Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

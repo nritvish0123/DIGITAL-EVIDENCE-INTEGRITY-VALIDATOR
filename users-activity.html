@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Activity - Admin Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <main class="main-content">
+            <div class="container">
+                <div class="card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h2 style="margin: 0;">📜 Activity Logs</h2>
+                        <button onclick="downloadReport()" class="btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.9rem; background: #3b82f6;">Download Report</button>
+                    </div>
+                    <div style="max-height: 600px; overflow-y: auto;" class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Type</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="logsTable">
+                                <!-- Data loaded via admin.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <a href="admin.html" class="link dynamic-dashboard-link">← Back to Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
